@@ -9861,3 +9861,142 @@ section,
   .ticker-label { padding: 0 14px; font-size: 0.7rem; }
   .ticker-item { font-size: 0.82rem; padding: 0 14px; }
 }
+
+/*--------------------------------------------------------------
+# Ticker — rewrite for reliable seamless scroll
+--------------------------------------------------------------*/
+@keyframes ticker-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.admissions-ticker {
+  background: linear-gradient(90deg, #011e2c 0%, #04415f 100%) !important;
+  display: flex !important;
+  align-items: stretch !important;
+  overflow: hidden !important;
+  height: 46px !important;
+  position: relative;
+}
+
+.ticker-label {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  background: #d4a017 !important;
+  color: #011e2c !important;
+  font-weight: 800 !important;
+  font-size: 0.78rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  padding: 0 20px !important;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+  z-index: 2;
+}
+
+.ticker-label i { font-size: 1rem !important; }
+
+.ticker-track-wrap {
+  flex: 1 !important;
+  overflow: hidden !important;
+  display: flex !important;
+  align-items: center !important;
+  -webkit-mask: none !important;
+  mask: none !important;
+}
+
+.ticker-track {
+  display: flex !important;
+  align-items: center !important;
+  white-space: nowrap !important;
+  width: max-content !important;
+  animation: ticker-scroll 32s linear infinite !important;
+  will-change: transform;
+  gap: 0 !important;
+}
+
+.ticker-track:hover {
+  animation-play-state: paused !important;
+}
+
+.ticker-item {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 7px !important;
+  color: rgba(255,255,255,0.92) !important;
+  font-size: 0.88rem !important;
+  font-weight: 600 !important;
+  padding: 0 24px !important;
+  white-space: nowrap;
+}
+
+.ticker-item i {
+  color: #d4a017 !important;
+  font-size: 0.9rem !important;
+}
+
+.ticker-sep {
+  color: rgba(212,160,23,0.6) !important;
+  font-size: 0.6rem !important;
+  padding: 0 4px;
+}
+
+/*--------------------------------------------------------------
+# Headings — reduce size & weight everywhere except hero
+--------------------------------------------------------------*/
+/* Section titles (used by courses, why, faq, contact, testimonials) */
+.section-title h2 {
+  font-size: 26px !important;
+  font-weight: 700 !important;
+}
+
+/* About section title */
+.apjcps-section-title {
+  font-size: 2rem !important;
+  font-weight: 700 !important;
+}
+
+/* Stat numbers */
+.stat-strip-num {
+  font-size: 1.8rem !important;
+  font-weight: 700 !important;
+}
+
+/* Why cards */
+.why-card h4 {
+  font-size: 0.98rem !important;
+  font-weight: 700 !important;
+}
+
+/* Contact form heading */
+.contact-form-panel h3 {
+  font-size: 1.5rem !important;
+  font-weight: 700 !important;
+}
+
+/* FAQ button (accordion) */
+.faq-accordion .accordion-button {
+  font-size: 0.95rem !important;
+  font-weight: 700 !important;
+}
+
+/* Footer dark heading */
+.footer-dark-heading {
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+}
+
+/*--------------------------------------------------------------
+# Course name — make even bigger
+--------------------------------------------------------------*/
+.course-name {
+  font-size: 1.55rem !important;
+  font-weight: 800 !important;
+  line-height: 1.2 !important;
+}
+
+@media (max-width: 992px) {
+  .course-name { font-size: 1.25rem !important; }
+  .apjcps-section-title { font-size: 1.65rem !important; }
+}
