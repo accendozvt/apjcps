@@ -10000,3 +10000,35 @@ section,
   .course-name { font-size: 1.25rem !important; }
   .apjcps-section-title { font-size: 1.65rem !important; }
 }
+
+/*--------------------------------------------------------------
+# Ticker — white background to differentiate from stats strip
+--------------------------------------------------------------*/
+.admissions-ticker {
+  background: #ffffff !important;
+  border-bottom: 1px solid #e0ecf4 !important;
+}
+
+.ticker-label {
+  background: #011e2c !important;
+  color: #d4a017 !important;
+}
+
+.ticker-item {
+  color: #011e2c !important;
+}
+
+.ticker-item i {
+  color: #04415f !important;
+}
+
+.ticker-sep {
+  color: rgba(4,65,95,0.35) !important;
+}
+
+/*--------------------------------------------------------------
+# Course name — reduce weight by 1 step (800 -> 700)
+--------------------------------------------------------------*/
+.course-name {
+  font-weight: 700 !important;
+}
